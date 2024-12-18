@@ -1,0 +1,107 @@
+<!-- services.page.html -->
+<ion-header class="services-header">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Services</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="services-content">
+  <!-- Searchbar -->
+  <ion-searchbar
+    placeholder="Rechercher un service"
+    animated="true"
+    class="ion-padding-top custom-searchbar"
+  >
+  </ion-searchbar>
+
+  <!-- Liste des services -->
+  <ion-list class="services-list">
+    <!-- Service 1 -->
+    <ion-item-sliding>
+      <ion-item lines="full" detail>
+        <ion-thumbnail slot="start" class="service-icon">
+          <ion-icon name="cut"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Coupe de cheveux</h2>
+          <p class="service-details">
+            <ion-text color="medium">Durée: 30 min</ion-text>
+          </p>
+        </ion-label>
+        <ion-note slot="end" class="price-tag"> $30 </ion-note>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning">
+          <ion-icon slot="top" name="create"></ion-icon>
+          Modifier
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="top" name="trash"></ion-icon>
+          Supprimer
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- Service 2 -->
+    <ion-item-sliding>
+      <ion-item lines="full" detail>
+        <ion-thumbnail slot="start" class="service-icon">
+          <ion-icon name="color-palette"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Coloration</h2>
+          <p class="service-details">
+            <ion-text color="medium">Durée: 90 min</ion-text>
+          </p>
+        </ion-label>
+        <ion-note slot="end" class="price-tag"> $50 </ion-note>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning">
+          <ion-icon slot="top" name="create"></ion-icon>
+          Modifier
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="top" name="trash"></ion-icon>
+          Supprimer
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- Service 3 -->
+    <ion-item-sliding>
+      <ion-item lines="full" detail>
+        <ion-thumbnail slot="start" class="service-icon">
+          <ion-icon name="scissors"></ion-icon>
+        </ion-thumbnail>
+        <ion-label>
+          <h2>Rasage</h2>
+          <p class="service-details">
+            <ion-text color="medium">Durée: 20 min</ion-text>
+          </p>
+        </ion-label>
+        <ion-note slot="end" class="price-tag"> $20 </ion-note>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="warning">
+          <ion-icon slot="top" name="create"></ion-icon>
+          Modifier
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="top" name="trash"></ion-icon>
+          Supprimer
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- Bouton d'ajout -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
