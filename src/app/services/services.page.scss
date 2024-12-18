@@ -7,7 +7,7 @@
   --box-shadow: none;
   --background: #ffffff;
   --border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 .services-list {
@@ -71,4 +71,8 @@ ion-item-options {
 
 ion-fab-button {
   margin: 16px;
+}
+.empty-state {
+  justify-items: center;
+  text-align: center;
 }
