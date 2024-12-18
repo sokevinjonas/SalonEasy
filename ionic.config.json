@@ -1,0 +1,7 @@
+{
+  "name": "SalonEasy",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
