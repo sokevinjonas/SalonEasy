@@ -1,20 +1,89 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+<!-- dashboard.page.html -->
+<ion-header class="dashboard-header">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Salon Easy</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="dashboard-content">
+  <ion-grid class="ion-padding">
+    <!-- Section des résumés -->
+    <ion-row class="ion-margin-bottom">
+      <ion-col size="12" size-md="4">
+        <ion-card class="dashboard-card">
+          <ion-card-header>
+            <ion-card-title class="card-title"
+              >Rendez-vous aujourd'hui</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            <h2 class="metric-value">5</h2>
+            <p class="metric-label">rendez-vous planifiés</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+      <ion-col size="12" size-md="4">
+        <ion-card class="dashboard-card">
+          <ion-card-header>
+            <ion-card-title class="card-title"
+              >Revenus aujourd'hui</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            <h2 class="metric-value revenue">$120</h2>
+            <p class="metric-label">de revenus générés</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-card class="dashboard-card">
+          <ion-card-header>
+            <ion-card-title class="card-title"
+              >Service populaire</ion-card-title
+            >
+          </ion-card-header>
+          <ion-card-content class="card-content">
+            <h2 class="metric-value service">Coupe de cheveux</h2>
+            <p class="metric-label">service le plus demandé</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <!-- Section des boutons de navigation -->
+    <ion-row class="nav-buttons ion-margin-top">
+      <ion-col size="12" size-md="4">
+        <ion-button expand="block" routerLink="/rdv" class="nav-button">
+          <ion-icon slot="start" name="calendar"></ion-icon>
+          Rendez-vous
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-button
+          expand="block"
+          routerLink="/clients"
+          color="secondary"
+          class="nav-button"
+        >
+          <ion-icon slot="start" name="people"></ion-icon>
+          Clients
+        </ion-button>
+      </ion-col>
+
+      <ion-col size="12" size-md="4">
+        <ion-button
+          expand="block"
+          routerLink="/services"
+          color="tertiary"
+          class="nav-button"
+        >
+          <ion-icon slot="start" name="cut"></ion-icon>
+          Services
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

@@ -1,0 +1,98 @@
+<!-- appointments.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Rendez-vous</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="appointments-content">
+  <!-- Searchbar -->
+  <ion-searchbar
+    placeholder="Rechercher un rendez-vous"
+    animated="true"
+    class="ion-padding-top"
+  >
+  </ion-searchbar>
+
+  <!-- Liste des rendez-vous -->
+  <ion-list class="appointments-list">
+    <!-- Rendez-vous 1 -->
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <ion-icon name="person-circle" class="avatar-icon"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h2>John Doe</h2>
+          <p>Coupe de cheveux</p>
+          <ion-note> <ion-icon name="time-outline"></ion-icon> 10h00 </ion-note>
+        </ion-label>
+        <ion-badge slot="end" color="primary">À venir</ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- Rendez-vous 2 -->
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <ion-icon name="person-circle" class="avatar-icon"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h2>Jane Smith</h2>
+          <p>Coloration</p>
+          <ion-note> <ion-icon name="time-outline"></ion-icon> 12h00 </ion-note>
+        </ion-label>
+        <ion-badge slot="end" color="warning">En attente</ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+    <!-- Rendez-vous 3 -->
+    <ion-item-sliding>
+      <ion-item lines="full">
+        <ion-avatar slot="start">
+          <ion-icon name="person-circle" class="avatar-icon"></ion-icon>
+        </ion-avatar>
+        <ion-label>
+          <h2>David Brown</h2>
+          <p>Rasage</p>
+          <ion-note> <ion-icon name="time-outline"></ion-icon> 14h00 </ion-note>
+        </ion-label>
+        <ion-badge slot="end" color="success">Confirmé</ion-badge>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="success">
+          <ion-icon slot="icon-only" name="create"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <!-- Bouton d'ajout -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="primary">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
