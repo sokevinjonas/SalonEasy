@@ -5,11 +5,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content class="dashboard-content">
+<ion-content fullscreen="true" class="dashboard-content">
   <ion-fab slot="fixed" vertical="bottom" horizontal="end">
-    <ion-fab-button>
+    <ion-fab-button [routerLink]="['/ventes']">
       <ion-icon name="cart-outline"></ion-icon>
-      <!-- <ion-icon name="add"></ion-icon> -->
     </ion-fab-button>
   </ion-fab>
   <ion-grid class="ion-padding">

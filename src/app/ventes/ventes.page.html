@@ -1,0 +1,100 @@
+<!-- sales.page.html -->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Nouveau Client / Vente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-grid fixed>
+    <form (submit)="nouvelleVente()">
+      <!-- Informations client -->
+      <ion-row class="ion-margin-top">
+        <ion-col size="12">
+          <ion-input
+            type="text"
+            label="Nom du client"
+            label-placement="stacked"
+            placeholder="Entrez le nom du client"
+            fill="outline"
+          ></ion-input>
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="ion-margin-top">
+        <ion-col size="6">
+          <ion-input
+            type="tel"
+            label="Numéro client"
+            label-placement="stacked"
+            placeholder="Entrez le numéro"
+            fill="outline"
+          ></ion-input>
+        </ion-col>
+        <ion-col size="6">
+          <ion-select
+            label="Type de client"
+            label-placement="stacked"
+            placeholder="Sélectionnez"
+            fill="outline"
+          >
+            <ion-select-option value="enfant">Enfant</ion-select-option>
+            <ion-select-option value="adulte">Adulte</ion-select-option>
+          </ion-select>
+        </ion-col>
+      </ion-row>
+
+      <!-- Sélection prestation -->
+      <ion-select
+        class="ion-margin-top"
+        label="Prestation"
+        label-placement="stacked"
+        placeholder="Sélectionnez la prestation"
+        fill="outline"
+      >
+        <ion-select-option value="coupe"
+          >Coupe simple - 2000 FCFA</ion-select-option
+        >
+        <ion-select-option value="soin"
+          >Coupe + Soin - 5000 FCFA</ion-select-option
+        >
+        <ion-select-option value="tresses"
+          >Tresses - 7000 FCFA</ion-select-option
+        >
+      </ion-select>
+
+      <!-- Montant reçu -->
+      <ion-input
+        class="ion-margin-top"
+        type="number"
+        label="Montant reçu"
+        label-placement="stacked"
+        placeholder="Entrez le montant"
+        fill="outline"
+      ></ion-input>
+
+      <!-- Résumé -->
+      <div class="ion-margin-top ion-padding summary">
+        <p>Total : 5000 FCFA</p>
+        <p>Monnaie : 3000 FCFA</p>
+      </div>
+
+      <!-- Boutons -->
+      <ion-row class="ion-margin-top">
+        <ion-col>
+          <ion-button type="submit" expand="block" color="success"
+            >Enregistrer</ion-button
+          >
+        </ion-col>
+        <ion-col>
+          <ion-button type="submit" expand="block" color="medium" fill="outline"
+            >Annuler</ion-button
+          >
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-grid>
+</ion-content>
