@@ -62,7 +62,9 @@
 
         <!-- Bouton d'enregistrement -->
         <ion-col size="6" class="ion-text-center">
-          <ion-button type="submit" expand="block">Enregistrer</ion-button>
+          <ion-button type="submit" expand="block">
+            {{editingIndex === null ? 'Enregistrer': 'Modifier'}}
+          </ion-button>
         </ion-col>
       </ion-row>
     </form>

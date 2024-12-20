@@ -6,24 +6,16 @@
 </ion-header>
 
 <ion-content class="dashboard-content">
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="cart-outline"></ion-icon>
+      <!-- <ion-icon name="add"></ion-icon> -->
+    </ion-fab-button>
+  </ion-fab>
   <ion-grid class="ion-padding">
     <!-- Section des résumés -->
     <ion-row class="ion-margin-bottom">
-      <ion-col size="12" size-md="4">
-        <ion-card class="dashboard-card">
-          <ion-card-header>
-            <ion-card-title class="card-title"
-              >Rendez-vous aujourd'hui</ion-card-title
-            >
-          </ion-card-header>
-          <ion-card-content class="card-content">
-            <h2 class="metric-value">5</h2>
-            <p class="metric-label">rendez-vous planifiés</p>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-
-      <ion-col size="12" size-md="4">
+      <ion-col size="12" size-md="6">
         <ion-card class="dashboard-card">
           <ion-card-header>
             <ion-card-title class="card-title"
@@ -37,7 +29,7 @@
         </ion-card>
       </ion-col>
 
-      <ion-col size="12" size-md="4">
+      <ion-col size="12" size-md="6">
         <ion-card class="dashboard-card">
           <ion-card-header>
             <ion-card-title class="card-title"

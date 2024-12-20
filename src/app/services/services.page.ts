@@ -25,7 +25,6 @@ export class ServicesPage implements OnInit {
     console.log(this.newPrestation);
   }
 
-  // Méthode appelée lors de la soumission du formulaire
   onSubmit() {
     // Vérification que tous les champs sont remplis
     if (
@@ -38,6 +37,7 @@ export class ServicesPage implements OnInit {
       if (this.editingIndex !== null) {
         // Si la prestation existe déjà, on la met à jour
         this.newPrestation[this.editingIndex] = { ...this.prestation };
+
         this.editingIndex = null; // Réinitialiser l'index après modification
       } else {
         // Sinon, on ajoute la nouvelle prestation à la liste
