@@ -20,6 +20,8 @@
             label-placement="stacked"
             placeholder="Entrez le nom du client"
             fill="outline"
+            [(ngModel)]="ventes.nom"
+            name="nom"
           ></ion-input>
         </ion-col>
       </ion-row>
@@ -32,6 +34,8 @@
             label-placement="stacked"
             placeholder="Entrez le numéro"
             fill="outline"
+            [(ngModel)]="ventes.numero"
+            name="numero"
           ></ion-input>
         </ion-col>
         <ion-col size="6">
@@ -40,7 +44,10 @@
             label-placement="stacked"
             placeholder="Sélectionnez"
             fill="outline"
+            [(ngModel)]="ventes.type"
+            name="type"
           >
+            <ion-select-option disabled="true">--Choisir--</ion-select-option>
             <ion-select-option value="enfant">Enfant</ion-select-option>
             <ion-select-option value="adulte">Adulte</ion-select-option>
           </ion-select>
@@ -54,15 +61,19 @@
         label-placement="stacked"
         placeholder="Sélectionnez la prestation"
         fill="outline"
+        [(ngModel)]="ventes.presation_id"
+        name="presation_id"
+        (ngModelChange)="calculerResume()"
       >
-        <ion-select-option value="coupe"
-          >Coupe simple - 2000 FCFA</ion-select-option
+        <ion-select-option disabled="true">--Choisir--</ion-select-option>
+        <ion-select-option value="" *ngIf="prestation_recupere.length ===0"
+          >Aucune Prestation disponible</ion-select-option
         >
-        <ion-select-option value="soin"
-          >Coupe + Soin - 5000 FCFA</ion-select-option
+        <ion-select-option
+          *ngFor="let item of prestation_recupere; let i =index"
+          [value]="i"
         >
-        <ion-select-option value="tresses"
-          >Tresses - 7000 FCFA</ion-select-option
+          {{item.nom}} - {{item.prix}} FCFA</ion-select-option
         >
       </ion-select>
 
@@ -74,12 +85,22 @@
         label-placement="stacked"
         placeholder="Entrez le montant"
         fill="outline"
+        [(ngModel)]="ventes.montant_recu"
+        name="montant_recu"
+        (ionInput)="calculerMonnaie()"
       ></ion-input>
 
       <!-- Résumé -->
       <div class="ion-margin-top ion-padding summary">
-        <p>Total : 5000 FCFA</p>
-        <p>Monnaie : 3000 FCFA</p>
+        <p>
+          Total :
+          <ion-badge color="success" mode="ios">{{total}} FCFA</ion-badge>
+        </p>
+        <p>
+          Monnaie :<ion-badge color="danger" slot="end" mode="ios"
+            >{{monnaie}} FCFA</ion-badge
+          >
+        </p>
       </div>
 
       <!-- Boutons -->
